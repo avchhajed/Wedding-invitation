@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>सस्नेह निमंत्रण | चि. हर्ष एवं चि. सौ. कां. साक्षी</title>
+
+  <!-- WhatsApp / Social Open Graph Preview Tags -->
+  <meta property="og:title" content="सस्नेह निमंत्रण | हर्ष & साक्षी शुभ विवाह" />
+  <meta property="og:description" content="११ एवं १२ दिसंबर २०२६ • सुरभि लॉन, अजंता रोड, जलगाँव। आप सपरिवार सादर आमंत्रित हैं।" />
+  <meta property="og:image" content="groom.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#6B0F1A" />
+
+  <!-- Royal Devanagari & Serif Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ivory: #FAF3E0;
+      --ivory-dark: #F1E3C3;
+      --maroon: #6B0F1A;
+      --maroon-deep: #4A070F;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --gold-dark: #9E7B1C;
+      --sandstone: #C89F65;
+      --text-dark: #2C120E;
+      --text-muted: #5C3A32;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--ivory);
+      color: var(--text-dark);
+      font-family: 'Tiro Devanagari Hindi', serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(107, 15, 26, 0.06) 0%, transparent 50%),
+        repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.03) 0px, rgba(212, 175, 55, 0.03) 2px, transparent 2px, transparent 12px);
+    }
+
+    /* Continuous Falling Petals Canvas */
+    #petals-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 90;
+    }
+
+    /* Royal Entry Curtain (Splash Screen) */
+    #royal-curtain {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: visibility 1.2s ease;
+    }
+
+    #royal-curtain.opened {
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .curtain-panel {
+      position: absolute;
+      top: 0;
+      width: 50.5%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon) 50%, #3A040A 100%);
+      border-bottom: 4px solid var(--gold);
+      transition: transform 1.25s cubic-bezier(0.77, 0, 0.175, 1);
+      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.75);
+    }
+
+    .curtain-left {
+      left: 0;
+      border-right: 2px solid var(--gold);
+      background-image:
+        radial-gradient(circle at 100% 50%, rgba(212, 175, 55, 0.18), transparent 60%),
+        linear-gradient(135deg, var(--maroon-deep), var(--maroon));
+    }
+
+    .curtain-right {
+      right: 0;
+      border-left: 2px solid var(--gold);
+      background-image:
+        radial-gradient(circle at 0% 50%, rgba(212, 175, 55, 0.18), transparent 60%),
+        linear-gradient(225deg, var(--maroon-deep), var(--maroon));
+    }
+
+    #royal-curtain.opened .curtain-left {
+      transform: translateX(-102%);
+    }
+
+    #royal-curtain.opened .curtain-right {
+      transform: translateX(102%);
+    }
+
+    .curtain-content {
+      position: relative;
+      z-index: 1001;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      max-width: 440px;
+      width: 92%;
+      background: rgba(58, 4, 10, 0.88);
+      border: 2px solid var(--gold);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(212, 175, 55, 0.25);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    #royal-curtain.opened .curtain-content {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+
+    .mantra-top {
+      color: var(--gold-light);
+      font-size: 0.92rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+
+    .mantra-sub {
+      color: var(--gold);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .curtain-title {
+      font-family: 'Rozha One', serif;
+      color: var(--gold);
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    .curtain-names {
+      font-family: 'Rozha One', serif;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #F3E5AB, #D4AF37, #FFF3C4, #D4AF37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0.4rem 0 1.25rem;
+      line-height: 1.2;
+    }
+
+    .seal-btn {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 30%, #F7E7A9, #D4AF37 60%, #9E7B1C 100%);
+      color: var(--maroon-deep);
+      border: 3px double var(--maroon-deep);
+      border-radius: 50px;
+      padding: 0.85rem 2.2rem;
+      font-family: 'Rozha One', serif;
+      font-size: 1.25rem;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.65);
+      animation: pulseSeal 2s infinite;
+      transition: transform 0.2s ease;
+    }
+
+    .seal-btn span {
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .seal-btn:active {
+      transform: scale(0.96);
+    }
+
+    @keyframes pulseSeal {
+      0%, 100% { box-shadow: 0 0 18px rgba(212, 175, 55, 0.55); }
+      50% { box-shadow: 0 0 34px rgba(243, 229, 171, 0.95); }
+    }
+
+    /* Main Container */
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1rem 5.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Ornamental Header Banner */
+    .royal-hero {
+      margin-top: 1.25rem;
+      background: linear-gradient(180deg, var(--maroon-deep) 0%, var(--maroon) 100%);
+      color: var(--ivory);
+      border: 3px solid var(--gold);
+      border-radius: 28px 28px 16px 16px;
+      padding: 2rem 1.25rem 2.5rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 14px 35px rgba(74, 7, 15, 0.28);
+      overflow: hidden;
+    }
+
+    .royal-hero::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 22px 22px 12px 12px;
+      pointer-events: none;
+    }
+
+    .mandala-bg {
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 260px;
+      height: 260px;
+      opacity: 0.14;
+      pointer-events: none;
+      animation: spinSlow 45s linear infinite;
+    }
+
+    @keyframes spinSlow {
+      from { transform: translateX(-50%) rotate(0deg); }
+      to { transform: translateX(-50%) rotate(360deg); }
+    }
+
+    .ganesh-emblem {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-size: 1.75rem;
+    }
+
+    .hero-mantra-main {
+      font-family: 'Rozha One', serif;
+      color: var(--gold-light);
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-mantra-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.5rem;
+      font-size: 0.88rem;
+      color: var(--gold);
+      margin: 0.35rem 0 1.25rem;
+    }
+
+    .invite-badge {
+      display: inline-block;
+      padding: 0.25rem 1.4rem;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-family: 'Rozha One', serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-couple-title {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(2.1rem, 7vw, 3.2rem);
+      background: linear-gradient(to right, #F3E5AB, #D4AF37, #FFF6D1, #D4AF37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.25;
+      margin: 0.35rem 0;
+    }
+
+    .hero-sub-english {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .hero-date-pill {
+      margin-top: 1.25rem;
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.16);
+      border: 1px solid var(--gold);
+      color: #FFF8E7;
+      padding: 0.45rem 1.4rem;
+      border-radius: 50px;
+      font-size: 1.05rem;
+    }
+
+    /* Section Styling */
+    .royal-section {
+      margin-top: 2rem;
+      background: rgba(255, 251, 242, 0.92);
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 1.75rem 1.25rem;
+      box-shadow: 0 10px 28px rgba(107, 15, 26, 0.08);
+      position: relative;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 1.35rem;
+    }
+
+    .section-heading h2 {
+      font-family: 'Rozha One', serif;
+      color: var(--maroon);
+      font-size: clamp(1.6rem, 5vw, 2.1rem);
+      font-weight: 400;
+    }
+
+    .section-heading .en-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      display: block;
+      margin-top: -0.2rem;
+    }
+
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+      color: var(--gold-dark);
+    }
+
+    .ornament-divider::before,
+    .ornament-divider::after {
+      content: "";
+      height: 1.5px;
+      width: 55px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    /* Countdown Timer */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .count-box {
+      background: linear-gradient(180deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 14px;
+      padding: 0.85rem 0.35rem;
+      text-align: center;
+      color: var(--ivory);
+      box-shadow: 0 6px 14px rgba(107, 15, 26, 0.18);
+    }
+
+    .count-num {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-weight: 700;
+      color: var(--gold-light);
+      display: block;
+      line-height: 1.1;
+    }
+
+    .count-label {
+      font-size: 0.78rem;
+      color: var(--gold);
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    /* Couple Jharokha Section */
+    .couple-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    @media (min-width: 720px) {
+      .couple-grid {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1.25rem;
+      }
+    }
+
+    .couple-card {
+      text-align: center;
+      background: linear-gradient(180deg, #FFFDF8 0%, var(--ivory-dark) 100%);
+      border: 1.5px solid var(--sandstone);
+      border-radius: 18px;
+      padding: 1.4rem 1rem;
+      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.14);
+    }
+
+    /* Rajasthani Jharokha Arch Frame */
+    .jharokha-frame {
+      width: 215px;
+      height: 265px;
+      margin: 0 auto 1.1rem;
+      padding: 7px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold));
+      border-radius: 110px 110px 14px 14px;
+      box-shadow: 0 10px 24px rgba(107, 15, 26, 0.22);
+      position: relative;
+    }
+
+    .jharokha-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 104px 104px 10px 10px;
+      overflow: hidden;
+      border: 2px solid var(--maroon);
+      background: var(--maroon-deep);
+    }
+
+    .jharokha-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .couple-card:hover .jharokha-inner img {
+      transform: scale(1.04);
+    }
+
+    .person-name {
+      font-family: 'Rozha One', serif;
+      color: var(--maroon);
+      font-size: 1.65rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .lineage-text {
+      font-size: 0.96rem;
+      color: var(--text-dark);
+      line-height: 1.55;
+    }
+
+    .lineage-text strong {
+      color: var(--maroon);
+    }
+
+    .kalash-divider {
+      text-align: center;
+      color: var(--maroon);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+
+    .kalash-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--maroon);
+      border: 2px solid var(--gold);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Rozha One', serif;
+      font-size: 1.35rem;
+      box-shadow: 0 4px 15px rgba(107, 15, 26, 0.25);
+    }
+
+    /* Itinerary Cards */
+    .master-cal-wrap {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .day-block {
+      margin-bottom: 1.75rem;
+    }
+
+    .day-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .day-banner {
+      background: linear-gradient(90deg, var(--maroon-deep), var(--maroon), var(--maroon-deep));
+      color: var(--gold-light);
+      border: 1.5px solid var(--gold);
+      border-radius: 12px;
+      padding: 0.65rem 1rem;
+      text-align: center;
+      font-family: 'Rozha One', serif;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .events-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    @media (min-width: 640px) {
+      .events-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .event-card {
+      background: #FFFDF7;
+      border: 1.5px solid var(--sandstone);
+      border-left: 5px solid var(--maroon);
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.7rem;
+      box-shadow: 0 4px 12px rgba(44, 18, 14, 0.05);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold-dark);
+    }
+
+    .event-title {
+      font-family: 'Rozha One', serif;
+      color: var(--maroon);
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .event-time {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    /* Royal Buttons */
+    .btn-royal {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1rem;
+      border-radius: 50px;
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 0.88rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1.5px solid var(--gold);
+      transition: all 0.2s ease;
+      font-weight: 600;
+    }
+
+    .btn-maroon {
+      background: var(--maroon);
+      color: var(--gold-light);
+    }
+
+    .btn-maroon:hover {
+      background: var(--maroon-deep);
+      box-shadow: 0 4px 12px rgba(107, 15, 26, 0.3);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #F3E5AB, #D4AF37);
+      color: var(--maroon-deep);
+      border-color: var(--maroon);
+    }
+
+    .btn-gold:hover {
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.45);
+    }
+
+    .btn-whatsapp {
+      background: #1B7A43;
+      color: #FFFFFF;
+      border-color: #D4AF37;
+    }
+
+    .btn-whatsapp:hover {
+      background: #145E33;
+    }
+
+    /* Venue Card */
+    .venue-card {
+      background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon) 100%);
+      color: var(--ivory);
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      padding: 1.6rem 1.2rem;
+      text-align: center;
+    }
+
+    .venue-name {
+      font-family: 'Rozha One', serif;
+      font-size: 1.6rem;
+      color: var(--gold-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .venue-address {
+      font-size: 1.05rem;
+      color: #FFF5DC;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Family Hosts & Contacts */
+    .family-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .family-box {
+      background: #FFFDF8;
+      border: 1px solid rgba(200, 159, 101, 0.65);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .family-role {
+      font-family: 'Rozha One', serif;
+      color: var(--maroon);
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .family-names {
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    @media (min-width: 560px) {
+      .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .contact-item {
+      background: var(--ivory-dark);
+      border: 1.5px solid var(--gold);
+      border-radius: 14px;
+      padding: 0.9rem;
+      text-align: center;
+    }
+
+    .contact-person {
+      font-family: 'Rozha One', serif;
+      font-size: 1.2rem;
+      color: var(--maroon);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Floating Music Button & Bottom WhatsApp Share Bar */
+    .music-fab {
+      position: fixed;
+      bottom: 4.6rem;
+      right: 1rem;
+      z-index: 95;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--maroon);
+      border: 2px solid var(--gold);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease;
+    }
+
+    .music-fab:active {
+      transform: scale(0.92);
+    }
+
+    .sound-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 18px;
+    }
+
+    .sound-bars span {
+      width: 3px;
+      background: var(--gold-light);
+      border-radius: 2px;
+      height: 6px;
+      transition: height 0.2s ease;
+    }
+
+    .music-fab.playing .sound-bars span:nth-child(1) { animation: eq 0.7s infinite alternate; }
+    .music-fab.playing .sound-bars span:nth-child(2) { animation: eq 0.5s infinite alternate 0.2s; }
+    .music-fab.playing .sound-bars span:nth-child(3) { animation: eq 0.8s infinite alternate 0.1s; }
+    .music-fab.playing .sound-bars span:nth-child(4) { animation: eq 0.6s infinite alternate 0.3s; }
+
+    @keyframes eq {
+      0% { height: 5px; }
+      100% { height: 18px; }
+    }
+
+    .sticky-share-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 94;
+      background: rgba(74, 7, 15, 0.96);
+      backdrop-filter: blur(6px);
+      border-top: 1.5px solid var(--gold);
+      padding: 0.65rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sticky-share-bar .btn-whatsapp {
+      width: 100%;
+      max-width: 440px;
+      font-size: 0.98rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Folk Music (Luk Chup Na Jao Ji) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="luk-chup-na-jao.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Continuous Falling Rose & Marigold Petals Overlay -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- Royal Entry Curtain (Splash Screen) -->
+  <div id="royal-curtain" aria-modal="true" role="dialog">
+    <div class="curtain-panel curtain-left"></div>
+    <div class="curtain-panel curtain-right"></div>
+    <div class="curtain-content">
+      <div class="mantra-top">।। श्री गणेशाय नमः ।।</div>
+      <div class="mantra-sub">
+        <span>।। श्री वाकल माताय नमः ।।</span>
+        <span>।। श्री नाकोडा भैरव देवाय नमः ।।</span>
+      </div>
+      <div class="curtain-title">सस्नेह निमंत्रण</div>
+      <div class="curtain-names">हर्ष &amp; साक्षी</div>
+      <button id="open-invite-btn" class="seal-btn" type="button">
+        निमंत्रण खोलें
+        <span>Open Royal Invitation</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Invitation Content -->
+  <main class="wrapper">
+
+    <!-- 1. Royal Hero Header -->
+    <header class="royal-hero">
+      <!-- Subtle Rotating Mandala SVG -->
+      <svg class="mandala-bg" viewBox="0 0 200 200" fill="none" stroke="#F3E5AB" stroke-width="1.2">
+        <circle cx="100" cy="100" r="90" stroke-dasharray="4 4" />
+        <circle cx="100" cy="100" r="72" />
+        <circle cx="100" cy="100" r="52" stroke-dasharray="3 3" />
+        <polygon points="100,10 125,75 190,100 125,125 100,190 75,125 10,100 75,75" />
+        <polygon points="100,25 160,100 100,175 40,100" />
+      </svg>
+
+      <div class="ganesh-emblem" aria-hidden="true">ॐ</div>
+      <div class="hero-mantra-main">।। श्री गणेशाय नमः ।।</div>
+      <div class="hero-mantra-row">
+        <span>।। श्री वाकल माताय नमः ।।</span>
+        <span>।। श्री नाकोडा भैरव देवाय नमः ।।</span>
+      </div>
+
+      <div class="invite-badge">सस्नेह निमंत्रण</div>
+      <h1 class="hero-couple-title">चि. हर्ष &amp; चि. सौ. कां. साक्षी</h1>
+      <div class="hero-sub-english">Royal Wedding Celebration</div>
+      <div class="hero-date-pill">शुक्रवार, ११ एवं शनिवार, १२ दिसंबर २०२६ • जलगाँव</div>
+    </header>
+
+    <!-- 2. Live Wedding Countdown Timer -->
+    <section class="royal-section reveal" aria-label="Wedding Countdown">
+      <div class="section-heading">
+        <h2>शुभ विवाह उलटी गिनती</h2>
+        <span class="en-sub">Counting Down To The Royal Union</span>
+        <div class="ornament-divider">❖</div>
+      </div>
+
+      <div class="countdown-grid" id="countdown">
+        <div class="count-box">
+          <span class="count-num" id="cd-days">00</span>
+          <span class="count-label">दिन (Days)</span>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="cd-hours">00</span>
+          <span class="count-label">घंटे (Hrs)</span>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="cd-mins">00</span>
+          <span class="count-label">मिनट (Mins)</span>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="cd-secs">00</span>
+          <span class="count-label">सेकंड (Secs)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The Royal Couple (वर-वधू परिचय) -->
+    <section class="royal-section reveal" aria-label="Bride and Groom">
+      <div class="section-heading">
+        <h2>वर-वधू परिचय</h2>
+        <span class="en-sub">The Royal Couple</span>
+        <div class="ornament-divider">❖</div>
+      </div>
+
+      <div class="couple-grid">
+        <!-- Groom Card -->
+        <article class="couple-card">
+          <div class="jharokha-frame">
+            <div class="jharokha-inner">
+              <img src="groom.jpg" alt="चि. हर्ष" />
+            </div>
+          </div>
+          <h3 class="person-name">चि. हर्ष</h3>
+          <p class="lineage-text">
+            <strong>सुपौत्र :</strong> स्व. शांताबाई-दगडूलालजी पारख<br />
+            <strong>सुपुत्र :</strong> सौ. अनुपमा-राजेन्द्र पारख,<br />
+            जलगाँव (महाराष्ट्र)
+          </p>
+        </article>
+
+        <!-- Royal Divider -->
+        <div class="kalash-divider" aria-hidden="true">
+          <div class="kalash-circle">परिणय</div>
+        </div>
+
+        <!-- Bride Card -->
+        <article class="couple-card">
+          <div class="jharokha-frame">
+            <div class="jharokha-inner">
+              <img src="bride.jpg" alt="चि. सौ. कां. साक्षी" />
+            </div>
+          </div>
+          <h3 class="person-name">चि. सौ. कां. साक्षी</h3>
+          <p class="lineage-text">
+            <strong>सुपौत्री :</strong> स्व. पत्तासीबाई-लूणकरणजी कांकरिया<br />
+            <strong>सुपुत्री :</strong> श्रीमती अरुणा एवं स्व. महेशजी कांकरिया,<br />
+            बालाघाट (मध्य प्रदेश)
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Itinerary & Google Calendar Integration -->
+    <section class="royal-section reveal" aria-label="Wedding Events">
+      <div class="section-heading">
+        <h2>।। शुभ कार्यक्रम ।।</h2>
+        <span class="en-sub">Royal Wedding Itinerary</span>
+        <div class="ornament-divider">❖</div>
+      </div>
+
+      <div class="master-cal-wrap">
+        <a
+          class="btn-royal btn-gold"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E0%A4%B9%E0%A4%B0%E0%A5%8D%E0%A4%B7+%E0%A4%8F%E0%A4%B5%E0%A4%82+%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%80+%E0%A4%B6%E0%A5%81%E0%A4%AD+%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B9+%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%B9&dates=20261211T040000Z/20261212T153000Z&details=%E0%A4%B8%E0%A4%B8%E0%A5%8D%E0%A4%A8%E0%A5%87%E0%A4%B9+%E0%A4%A8%E0%A4%BF%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%A3+-+%E0%A4%B6%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%B0+%E0%A5%A7%E0%A5%A7+%E0%A4%8F%E0%A4%B5%E0%A4%82+%E0%A4%B6%E0%A4%A8%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0+%E0%A5%A7%E0%A5%A8+%E0%A4%A6%E0%A4%BF%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A5%A8%E0%A5%A6%E0%A5%A8%E0%A5%AC&location=Surbhi+Lawn%2C+Opposite+MIDC+Police+Station%2C+Ajanta+Road%2C+Jalgaon"
+        >
+          📅 संपूर्ण विवाह कार्यक्रम कैलेंडर में सेव करें (Save All Events)
+        </a>
+      </div>
+
+      <!-- Day 1: Friday, 11 December 2026 -->
+      <div class="day-block">
+        <div class="day-banner">शुक्रवार, ११ दिसंबर २०२६</div>
+        <div class="events-list">
+          <div class="event-card">
+            <div>
+              <div class="event-title">कुमकुम समारोह</div>
+              <div class="event-time">⏰ सुबह ९:३० बजे</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="कुमकुम समारोह - हर्ष एवं साक्षी विवाह" data-start="20261211T040000Z" data-end="20261211T050000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">हल्दी (पीठी)</div>
+              <div class="event-time">⏰ सुबह १०:३० बजे</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="हल्दी (पीठी) - हर्ष एवं साक्षी विवाह" data-start="20261211T050000Z" data-end="20261211T073000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">कार्निवल</div>
+              <div class="event-time">⏰ दोपहर ३:३० बजे से</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="कार्निवल - हर्ष एवं साक्षी विवाह" data-start="20261211T100000Z" data-end="20261211T123000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">संगीत संध्या (Sangeet Sandhya)</div>
+              <div class="event-time">⏰ शाम ७:३० से १०:०० बजे तक</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="संगीत संध्या (Sangeet Sandhya) - हर्ष एवं साक्षी विवाह" data-start="20261211T140000Z" data-end="20261211T163000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2: Saturday, 12 December 2026 -->
+      <div class="day-block">
+        <div class="day-banner">शनिवार, १२ दिसंबर २०२६</div>
+        <div class="events-list">
+          <div class="event-card">
+            <div>
+              <div class="event-title">निकासी</div>
+              <div class="event-time">⏰ सुबह ९:३० बजे</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="निकासी - हर्ष एवं साक्षी विवाह" data-start="20261212T040000Z" data-end="20261212T053000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">वरमाला (Varmala)</div>
+              <div class="event-time">⏰ सुबह ११ बजे</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="वरमाला (Varmala) - हर्ष एवं साक्षी विवाह" data-start="20261212T053000Z" data-end="20261212T063000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">स्नेह भोज समारोह</div>
+              <div class="event-time">⏰ सुबह ११:३० से दोपहर २:३० बजे तक</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="स्नेह भोज समारोह - हर्ष एवं साक्षी विवाह" data-start="20261212T060000Z" data-end="20261212T090000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">फेरे</div>
+              <div class="event-time">⏰ दोपहर ३:०० बजे</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="फेरे - हर्ष एवं साक्षी विवाह" data-start="20261212T093000Z" data-end="20261212T120000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+
+          <div class="event-card">
+            <div>
+              <div class="event-title">विदाई</div>
+              <div class="event-time">⏰ शाम ७:०० बजे</div>
+            </div>
+            <a class="btn-royal btn-maroon cal-link" data-title="विदाई - हर्ष एवं साक्षी विवाह" data-start="20261212T133000Z" data-end="20261212T143000Z" target="_blank" rel="noopener noreferrer">+ Add to Google Calendar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Royal Venue & Navigation -->
+    <section class="royal-section reveal" aria-label="Wedding Venue">
+      <div class="section-heading">
+        <h2>कार्यक्रम स्थल</h2>
+        <span class="en-sub">Royal Venue &amp; Directions</span>
+        <div class="ornament-divider">❖</div>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-name">सुरभि लॉन</div>
+        <p class="venue-address">एम.आई.डी.सी. पुलिस स्टेशन के सामने, अजंता रोड, जलगाँव</p>
+        <a
+          class="btn-royal btn-gold"
+          href="https://www.google.com/maps/search/?api=1&query=Surbhi+Lawn%2C+Ajanta+Road%2C+Opposite+MIDC+Police+Station%2C+Jalgaon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📍 Open in Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- 6. Family Hosts & Contacts -->
+    <section class="royal-section reveal" aria-label="Family Hosts and Contacts">
+      <div class="section-heading">
+        <h2>विनीत एवं संपर्क</h2>
+        <span class="en-sub">With Warm Regards From The Family</span>
+        <div class="ornament-divider">❖</div>
+      </div>
+
+      <div class="family-grid">
+        <div class="family-box">
+          <div class="family-role">विनीत :</div>
+          <div class="family-names">सौ. अनुपमा एवं राजेन्द्र पारख</div>
+        </div>
+
+        <div class="family-box">
+          <div class="family-role">स्वागतोत्सुक :</div>
+          <div class="family-names">इंद्रजीत, सचिन, देवेंद्र, तुषार, धीरज</div>
+        </div>
+
+        <div class="family-box">
+          <div class="family-role">दर्शनाभिलाषी :</div>
+          <div class="family-names">
+            सौ. प्रिया-देवेंद्र छल्लाणी, वापी (गुज.)<br />
+            राजकुमार कोचर, कटंगी-अमरावती
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cards">
+        <div class="contact-item">
+          <div class="contact-person">❖ संपर्क : सचिन (9595957711)</div>
+          <div class="contact-actions">
+            <a class="btn-royal btn-maroon" href="tel:+919595957711">📞 Call</a>
+            <a
+              class="btn-royal btn-whatsapp"
+              href="https://api.whatsapp.com/send?phone=919595957711&text=%E0%A4%9C%E0%A4%AF%20%E0%A4%9C%E0%A4%BF%E0%A4%A8%E0%A5%87%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0!%20%E0%A4%B9%E0%A4%B0%E0%A5%8D%E0%A4%B7%20%E0%A4%8F%E0%A4%B5%E0%A4%82%20%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%B6%E0%A5%81%E0%A4%AD%20%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B9%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A4%BF%E0%A4%95%20%E0%A4%B6%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A4%BE%E0%A4%AE%E0%A4%A8%E0%A4%BE%E0%A4%8F%E0%A4%82!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-person">❖ संपर्क : धीरज (9730891100)</div>
+          <div class="contact-actions">
+            <a class="btn-royal btn-maroon" href="tel:+919730891100">📞 Call</a>
+            <a
+              class="btn-royal btn-whatsapp"
+              href="https://api.whatsapp.com/send?phone=919730891100&text=%E0%A4%9C%E0%A4%AF%20%E0%A4%9C%E0%A4%BF%E0%A4%A8%E0%A5%87%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0!%20%E0%A4%B9%E0%A4%B0%E0%A5%8D%E0%A4%B7%20%E0%A4%8F%E0%A4%B5%E0%A4%82%20%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%B6%E0%A5%81%E0%A4%AD%20%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B9%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A4%BF%E0%A4%95%20%E0%A4%B6%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A4%BE%E0%A4%AE%E0%A4%A8%E0%A4%BE%E0%A4%8F%E0%A4%82!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Music Play/Pause Button -->
+  <button id="music-toggle" class="music-fab" type="button" aria-label="Toggle Background Music" title="Music On/Off">
+    <div class="sound-bars">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </button>
+
+  <!-- Sticky Bottom WhatsApp Share Bar -->
+  <div class="sticky-share-bar">
+    <a id="whatsapp-share-btn" class="btn-royal btn-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+      📲 WhatsApp पर निमंत्रण साझा करें (Share Invitation)
+    </a>
+  </div>
+
+  <script>
+    // 1. Curtain Reveal & Audio Playback Control
+    const curtain = document.getElementById('royal-curtain');
+    const openBtn = document.getElementById('open-invite-btn');
+    const bgMusic = document.getElementById('bg-music');
+    const musicToggle = document.getElementById('music-toggle');
+    let isPlaying = false;
+
+    function playMusic() {
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        musicToggle.classList.add('playing');
+      }).catch(() => {
+        isPlaying = false;
+        musicToggle.classList.remove('playing');
+      });
+    }
+
+    openBtn.addEventListener('click', () => {
+      curtain.classList.add('opened');
+      playMusic();
+    });
+
+    // Fallback tap-anywhere listener if mobile browser blocks initial play
+    document.body.addEventListener('touchstart', function firstTouch() {
+      if (!isPlaying && curtain.classList.contains('opened')) {
+        playMusic();
+      }
+      document.body.removeEventListener('touchstart', firstTouch);
+    }, { passive: true });
+
+    musicToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        isPlaying = false;
+        musicToggle.classList.remove('playing');
+      } else {
+        playMusic();
+      }
+    });
+
+    // 2. Live Wedding Countdown Timer (11 Dec 2026, 09:30 AM IST)
+    const weddingDate = new Date('2026-12-11T09:30:00+05:30').getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / 1000 / 60) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 3. Populate Individual Google Calendar Links Dynamically
+    const venueLocation = encodeURIComponent('Surbhi Lawn, Opposite MIDC Police Station, Ajanta Road, Jalgaon');
+    const eventDetails = encodeURIComponent('सस्नेह निमंत्रण - चि. हर्ष एवं चि. सौ. कां. साक्षी शुभ विवाह समारोह। विनीत: सौ. अनुपमा एवं राजेन्द्र पारख।');
+
+    document.querySelectorAll('.cal-link').forEach((link) => {
+      const title = encodeURIComponent(link.dataset.title);
+      const start = link.dataset.start;
+      const end = link.dataset.end;
+      link.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${eventDetails}&location=${venueLocation}`;
+    });
+
+    // 4. Dynamic WhatsApp Share Link (Includes Current Hosted Page URL)
+    const shareBtn = document.getElementById('whatsapp-share-btn');
+    const currentUrl = window.location.href;
+    const shareMessage = encodeURIComponent(
+      `।। श्री गणेशाय नमः ।।\n` +
+      `*सस्नेह निमंत्रण*\n\n` +
+      `*चि. हर्ष* एवं *चि. सौ. कां. साक्षी* के शुभ विवाह समारोह में आप सपरिवार सादर आमंत्रित हैं।\n\n` +
+      `📅 *दिनांक:* ११ एवं १२ दिसंबर २०२६\n` +
+      `📍 *स्थान:* सुरभि लॉन, अजंता रोड, जलगाँव\n\n` +
+      `डिजिटल निमंत्रण पत्र देखने के लिए नीचे दिए गए लिंक पर क्लिक करें:\n${currentUrl}`
+    );
+    shareBtn.href = `https://api.whatsapp.com/send?text=${shareMessage}`;
+
+    // 5. Continuous Falling Rose & Marigold Petals Canvas
+    const canvas = document.getElementById('petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const petalColors = [
+      'rgba(185, 28, 44, 0.72)',   // Royal Crimson Rose
+      'rgba(218, 56, 72, 0.68)',   // Deep Rose Pink
+      'rgba(245, 158, 11, 0.75)',  // Marigold Saffron
+      'rgba(251, 191, 36, 0.72)'   // Golden Marigold
+    ];
+
+    const petalCount = width < 600 ? 22 : 36;
+    const petals = Array.from({ length: petalCount }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: 6 + Math.random() * 7,
+      speedY: 0.7 + Math.random() * 1.1,
+      speedX: -0.4 + Math.random() * 0.8,
+      angle: Math.random() * Math.PI * 2,
+      spin: -0.02 + Math.random() * 0.04,
+      color: petalColors[Math.floor(Math.random() * petalColors.length)]
+    }));
+
+    function drawPetals() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (const p of petals) {
+        p.y += p.speedY;
+        p.x += p.speedX + Math.sin(p.angle) * 0.45;
+        p.angle += p.spin;
+
+        if (p.y > height + 15) {
+          p.y = -15;
+          p.x = Math.random() * width;
+        }
+        if (p.x > width + 15) p.x = -15;
+        if (p.x < -15) p.x = width + 15;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.angle);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.moveTo(0, -p.size);
+        ctx.bezierCurveTo(p.size, -p.size * 0.5, p.size * 0.8, p.size, 0, p.size);
+        ctx.bezierCurveTo(-p.size * 0.8, p.size, -p.size, -p.size * 0.5, 0, -p.size);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      requestAnimationFrame(drawPetals);
+    }
+
+    drawPetals();
+
+    // 6. Smooth Scroll Reveal Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
